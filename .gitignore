@@ -1,2 +1,4 @@
 .idea/
 venv/
+praktikum/__pycache__/
+tests/__pycache__/
