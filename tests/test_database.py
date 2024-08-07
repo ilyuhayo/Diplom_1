@@ -14,6 +14,7 @@ class TestDatabase:
         database.buns.append(bun)
         assert bun in database.available_buns()
 
+
     @pytest.mark.parametrize("ingredient_type, name, amount", [
         (INGREDIENT_TYPE_SAUCE, "hot sauce", 100),
         (INGREDIENT_TYPE_SAUCE, "sour cream", 200),
@@ -27,5 +28,3 @@ class TestDatabase:
         database = Database()
         database.ingredients.append(ingredient)
         assert ingredient in database.available_ingredients()
-
-

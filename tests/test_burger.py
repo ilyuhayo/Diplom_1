@@ -1,11 +1,6 @@
-import praktikum.burger
 from praktikum.burger import Burger
-from praktikum.bun import Bun
-from praktikum.ingredient import Ingredient
-from praktikum.database import Database
 from praktikum.ingredient_types import INGREDIENT_TYPE_SAUCE, INGREDIENT_TYPE_FILLING
 from unittest.mock import Mock
-from unittest.mock import patch
 
 
 class TestBurger:
@@ -42,6 +37,7 @@ class TestBurger:
         assert mock_ingredient not in burger.ingredients
         assert len(burger.ingredients) == 0
 
+
     def test_move_ingredient_true(self):
         mock_ingredient_1 = Mock()
         mock_ingredient_1.type = INGREDIENT_TYPE_FILLING
@@ -62,6 +58,7 @@ class TestBurger:
         assert burger.ingredients[0] == mock_ingredient_2
         assert burger.ingredients[1] == mock_ingredient_1
 
+
     def test_get_price_true(self):
         mock_bun = Mock()
         mock_bun.get_price.return_value = 100  # Используем метод get_price
@@ -74,6 +71,7 @@ class TestBurger:
 
         expected_price = (mock_bun.get_price() * 2) + mock_ingredient.get_price()
         assert burger.get_price() == expected_price
+
 
     def test_get_receipt_true(self):
         burger = Burger()
@@ -98,11 +96,3 @@ class TestBurger:
         )
 
         assert burger.get_receipt() == expected_receipt
-
-
-
-
-
-
-
-
