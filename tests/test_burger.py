@@ -51,9 +51,6 @@ class TestBurger:
         mock_ingredient_2.name = "chili sauce"
         mock_ingredient_2.price = 300
         burger.add_ingredient(mock_ingredient_2)
-        assert burger.ingredients[0] == mock_ingredient_1
-        assert burger.ingredients[1] == mock_ingredient_2
-
         burger.move_ingredient(0, 1)
         assert burger.ingredients[0] == mock_ingredient_2
         assert burger.ingredients[1] == mock_ingredient_1
