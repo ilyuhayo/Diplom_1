@@ -1,5 +1,6 @@
 from praktikum.bun import Bun
 
+
 class TestBun:
     def test_name_of_bun_true(self):
         bun = Bun("Кунжутная", 100.99)
